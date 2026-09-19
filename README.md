@@ -231,11 +231,39 @@ In-depth error analysis revealed important operational tradeoffs:
 ```
 
 ---
+## Conclusion
+# Why I Built This
 
-## 📜 Key Technical Decisions
+This project was built as an engineering exercise to explore how an AI support agent can combine intent classification, historical-case retrieval, response generation, and human-escalation decisions in a single workflow.
 
-A comprehensive log of **14 architectural decisions** is maintained in [`report/DECISION_LOG.md`](file:///home/harsha/Desktop/customer/report/DECISION_LOG.md), including:
-- Why TF-IDF was chosen over heavy dense embeddings (sub-millisecond local execution without GPU overhead).
-- Why parent-chain graph walking was used for thread reconstruction instead of response fan-out.
-- Why a 3-tier routing strategy (Pre-LLM keywords, Intent rules, Confidence thresholding) was implemented for customer safety.
-- How zero-leakage evaluation was strictly maintained between historical knowledge and golden evaluation data.
+The goal was not just to generate plausible support replies, but to build an evaluation-driven system where each major component can be measured against a human-labelled ground-truth set.
+
+The project therefore focuses on three questions:
+
+1. **Can the agent correctly understand the customer's intent?**
+2. **Can it generate a useful response grounded in how similar cases were handled historically?**
+3. **Can it reliably distinguish cases that can be handled automatically from those that should be escalated to a human?**
+
+The evaluation intentionally uses held-out examples and human-reviewed labels, with separate baselines and failure analysis, so that the reported results reflect the actual behaviour of the system rather than an optimistic demonstration.
+
+## Limitations
+
+This is a prototype built for the Hiver SDE Intern take-home assignment. The evaluation dataset is a relatively small human-labelled sample, and the system's routing confidence is not a substitute for production-grade calibration or monitoring.
+
+The results should therefore be interpreted as an evaluation of this prototype on the defined test set, not as a claim of production readiness.
+
+## Future Improvements
+
+With additional development time, I would focus on:
+
+* Calibrating routing confidence using a held-out validation set.
+* Improving handling of ambiguous and multi-intent customer messages.
+* Strengthening retrieval quality and evidence selection.
+* Improving escalation detection for repeated or unresolved support interactions.
+* Expanding the human-labelled evaluation set.
+* Adding production-style monitoring for incorrect auto-handling and escalation decisions.
+
+---
+
+**Built as part of the Hiver SDE Intern take-home assignment.**
+
