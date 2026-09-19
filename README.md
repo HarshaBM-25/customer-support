@@ -231,8 +231,7 @@ In-depth error analysis revealed important operational tradeoffs:
 ```
 
 ---
-## Conclusion
-# Why I Built This
+## Why I Built This
 
 This project was built as an engineering exercise to explore how an AI support agent can combine intent classification, historical-case retrieval, response generation, and human-escalation decisions in a single workflow.
 
