@@ -1,0 +1,494 @@
+{
+  "trivial_baseline": {
+    "system_name": "Trivial Baseline",
+    "sample_count": 200,
+    "intent_accuracy": 0.225,
+    "intent_macro_f1": 0.0459,
+    "intent_weighted_f1": 0.0827,
+    "intent_macro_precision": 0.0281,
+    "intent_macro_recall": 0.125,
+    "routing_accuracy": 0.225,
+    "routing_escalate_precision": 0.225,
+    "routing_escalate_recall": 1.0,
+    "routing_escalate_f1": 0.3673,
+    "false_auto_handle_count": 0,
+    "false_auto_handle_rate": 0.0,
+    "per_class_metrics": {
+      "account_issue": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "order_status": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "other_unclear": {
+        "precision": 0.225,
+        "recall": 1.0,
+        "f1": 0.3673,
+        "support": 45
+      },
+      "payment_issue": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 26
+      },
+      "product_question": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10
+      },
+      "return_refund": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 37
+      },
+      "shipping_delivery": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 40
+      },
+      "technical_support": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 25
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "account_issue",
+        "order_status",
+        "other_unclear",
+        "payment_issue",
+        "product_question",
+        "return_refund",
+        "shipping_delivery",
+        "technical_support"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          45,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          26,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          25,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "simple_baseline": {
+    "system_name": "Simple Rule Baseline",
+    "sample_count": 200,
+    "intent_accuracy": 0.48,
+    "intent_macro_f1": 0.4425,
+    "intent_weighted_f1": 0.5117,
+    "intent_macro_precision": 0.4731,
+    "intent_macro_recall": 0.4772,
+    "routing_accuracy": 0.705,
+    "routing_escalate_precision": 0.3871,
+    "routing_escalate_recall": 0.5333,
+    "routing_escalate_f1": 0.4486,
+    "false_auto_handle_count": 21,
+    "false_auto_handle_rate": 0.4667,
+    "per_class_metrics": {
+      "account_issue": {
+        "precision": 0.4167,
+        "recall": 0.8333,
+        "f1": 0.5556,
+        "support": 12
+      },
+      "order_status": {
+        "precision": 0.04,
+        "recall": 0.2,
+        "f1": 0.0667,
+        "support": 5
+      },
+      "other_unclear": {
+        "precision": 0.5833,
+        "recall": 0.3111,
+        "f1": 0.4058,
+        "support": 45
+      },
+      "payment_issue": {
+        "precision": 0.5238,
+        "recall": 0.4231,
+        "f1": 0.4681,
+        "support": 26
+      },
+      "product_question": {
+        "precision": 0.16,
+        "recall": 0.4,
+        "f1": 0.2286,
+        "support": 10
+      },
+      "return_refund": {
+        "precision": 0.9643,
+        "recall": 0.7297,
+        "f1": 0.8308,
+        "support": 37
+      },
+      "shipping_delivery": {
+        "precision": 0.6154,
+        "recall": 0.4,
+        "f1": 0.4848,
+        "support": 40
+      },
+      "technical_support": {
+        "precision": 0.4815,
+        "recall": 0.52,
+        "f1": 0.5,
+        "support": 25
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "account_issue",
+        "order_status",
+        "other_unclear",
+        "payment_issue",
+        "product_question",
+        "return_refund",
+        "shipping_delivery",
+        "technical_support"
+      ],
+      "matrix": [
+        [
+          10,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          6,
+          6,
+          14,
+          7,
+          7,
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          2,
+          1,
+          11,
+          3,
+          1,
+          4,
+          2
+        ],
+        [
+          3,
+          2,
+          0,
+          1,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          2,
+          2,
+          27,
+          3,
+          1
+        ],
+        [
+          0,
+          12,
+          6,
+          0,
+          3,
+          0,
+          16,
+          3
+        ],
+        [
+          2,
+          1,
+          1,
+          0,
+          6,
+          0,
+          2,
+          13
+        ]
+      ]
+    }
+  },
+  "core_agent": {
+    "system_name": "Nemotron RAG Agent",
+    "sample_count": 200,
+    "intent_accuracy": 0.405,
+    "intent_macro_f1": 0.3397,
+    "intent_weighted_f1": 0.4013,
+    "intent_macro_precision": 0.3546,
+    "intent_macro_recall": 0.3631,
+    "routing_accuracy": 0.655,
+    "routing_escalate_precision": 0.3125,
+    "routing_escalate_recall": 0.4444,
+    "routing_escalate_f1": 0.367,
+    "false_auto_handle_count": 25,
+    "false_auto_handle_rate": 0.5556,
+    "per_class_metrics": {
+      "account_issue": {
+        "precision": 0.4091,
+        "recall": 0.75,
+        "f1": 0.5294,
+        "support": 12
+      },
+      "order_status": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5
+      },
+      "other_unclear": {
+        "precision": 0.3095,
+        "recall": 0.2889,
+        "f1": 0.2989,
+        "support": 45
+      },
+      "payment_issue": {
+        "precision": 0.3333,
+        "recall": 0.1923,
+        "f1": 0.2439,
+        "support": 26
+      },
+      "product_question": {
+        "precision": 0.1765,
+        "recall": 0.3,
+        "f1": 0.2222,
+        "support": 10
+      },
+      "return_refund": {
+        "precision": 0.7917,
+        "recall": 0.5135,
+        "f1": 0.623,
+        "support": 37
+      },
+      "shipping_delivery": {
+        "precision": 0.5091,
+        "recall": 0.7,
+        "f1": 0.5895,
+        "support": 40
+      },
+      "technical_support": {
+        "precision": 0.3077,
+        "recall": 0.16,
+        "f1": 0.2105,
+        "support": 25
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "account_issue",
+        "order_status",
+        "other_unclear",
+        "payment_issue",
+        "product_question",
+        "return_refund",
+        "shipping_delivery",
+        "technical_support"
+      ],
+      "matrix": [
+        [
+          9,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          5,
+          4,
+          13,
+          6,
+          6,
+          1,
+          6,
+          4
+        ],
+        [
+          4,
+          2,
+          7,
+          5,
+          2,
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          0,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          5,
+          2,
+          0,
+          19,
+          9,
+          1
+        ],
+        [
+          0,
+          5,
+          6,
+          0,
+          0,
+          0,
+          28,
+          1
+        ],
+        [
+          1,
+          0,
+          7,
+          0,
+          5,
+          2,
+          6,
+          4
+        ]
+      ]
+    }
+  },
+  "llm_judge_reply_quality": {
+    "sample_size": 35,
+    "correctness": 4.97,
+    "groundedness": 4.97,
+    "relevance": 4.83,
+    "completeness": 4.69,
+    "tone": 4.94,
+    "mean_overall": 4.88
+  },
+  "judge_human_agreement": {
+    "evaluated_sample_size": 35,
+    "cohens_kappa": 0.0,
+    "exact_match_rate": 0.0857,
+    "adjacent_match_rate": 1.0
+  }
+}

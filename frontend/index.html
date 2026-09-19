@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books & More</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP HEADER / NAV -->
+  <header class="header">
+    <div class="nav-belt">
+      <!-- Logo -->
+      <div class="nav-left">
+        <div class="nav-logo border-hover">
+          <span class="amazon-text">amazon</span><span class="domain">.com</span>
+        </div>
+        <div class="nav-deliver border-hover">
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="deliver-text">
+            <span class="deliver-to">Deliver to</span>
+            <span class="deliver-country">United States</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="nav-search">
+        <div class="search-category">
+          <span>All</span> <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <input type="text" placeholder="Search Amazon" class="search-input">
+        <button class="search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <!-- Nav Right Items -->
+      <div class="nav-right">
+        <div class="nav-lang border-hover">
+          <span class="flag">🇺🇸</span> <span>EN</span> <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="nav-account border-hover">
+          <span class="nav-line-1">Hello, sign in</span>
+          <span class="nav-line-2">Account & Lists <i class="fa-solid fa-caret-down"></i></span>
+        </div>
+        <div class="nav-orders border-hover">
+          <span class="nav-line-1">Returns</span>
+          <span class="nav-line-2">& Orders</span>
+        </div>
+        <div class="nav-cart border-hover">
+          <i class="fa-solid fa-cart-shopping cart-icon"></i>
+          <span class="cart-count">0</span>
+          <span class="cart-text">Cart</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUB-NAV / CATEGORY BAR -->
+    <div class="nav-sub">
+      <div class="nav-sub-item all-btn"><i class="fa-solid fa-bars"></i> All</div>
+      <div class="nav-sub-item">Today's Deals</div>
+      <div class="nav-sub-item">Customer Service</div>
+      <div class="nav-sub-item">Registry</div>
+      <div class="nav-sub-item">Gift Cards</div>
+      <div class="nav-sub-item">Sell</div>
+      <div class="nav-sub-item prime-badge"><span>Prime</span> <i class="fa-solid fa-caret-down"></i></div>
+      <div class="nav-sub-item highlight">⚡ 24/7 AI Support Active</div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="main-container">
+    <div class="hero-banner">
+      <div class="hero-gradient"></div>
+      <div class="hero-content">
+        <h1>Welcome to Amazon Customer Support & Store</h1>
+        <p>You're on the simulated Amazon portal with integrated <strong>@AmazonHelp AI Agent</strong>.</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT CARDS GRID -->
+    <div class="product-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <h3>Gaming & Tech Gear</h3>
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=500&q=80');"></div>
+        <a href="#" class="card-link">See more deals</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h3>Echo & Alexa Smart Home</h3>
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1543512214-318c7553f230?w=500&q=80');"></div>
+        <a href="#" class="card-link">Explore smart home</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <h3>Fast Delivery with Prime</h3>
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&q=80');"></div>
+        <a href="#" class="card-link">Check delivery status</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card support-spotlight">
+        <div class="badge-ai">LIVE AI AGENT</div>
+        <h3>Need Help with an Order?</h3>
+        <p class="card-desc">Experience our real-time <strong>Nemotron RAG Support Agent</strong>. Click the yellow widget at the bottom right to chat!</p>
+        <div class="sample-chips">
+          <span class="chip" onclick="quickAsk('My package has not arrived and is 2 days late')">📦 Delayed delivery</span>
+          <span class="chip" onclick="quickAsk('I want a refund for a broken mug I received')">🔄 Request refund</span>
+          <span class="chip" onclick="quickAsk('Someone hacked into my account and charged my card')">🚨 Security alert</span>
+        </div>
+        <button class="open-chat-btn" onclick="toggleChat()">
+          <i class="fa-solid fa-headset"></i> Open AI Help Assistant
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FLOATING CHAT WIDGET -->
+  <div id="chat-widget" class="chat-widget-container">
+    <!-- Chat Launcher Button -->
+    <div id="chat-launcher" class="chat-launcher" onclick="toggleChat()">
+      <div class="launcher-avatar">
+        <i class="fa-solid fa-robot"></i>
+      </div>
+      <div class="launcher-text">
+        <span class="launcher-title">Amazon Support AI</span>
+        <span class="launcher-status">● Online</span>
+      </div>
+      <div class="launcher-badge">1</div>
+    </div>
+
+    <!-- Chat Modal Window -->
+    <div id="chat-modal" class="chat-modal hidden">
+      <!-- Header -->
+      <div class="chat-header">
+        <div class="agent-info">
+          <div class="agent-avatar">
+            <i class="fa-brands fa-amazon"></i>
+          </div>
+          <div>
+            <h4>Amazon Customer Assistant</h4>
+            <span class="agent-badge">⚡ Nemotron RAG & Safety Routing</span>
+          </div>
+        </div>
+        <div class="chat-controls">
+          <button class="icon-btn" onclick="clearChat()" title="Clear Chat"><i class="fa-solid fa-rotate-right"></i></button>
+          <button class="icon-btn" onclick="toggleChat()" title="Minimize"><i class="fa-solid fa-minus"></i></button>
+        </div>
+      </div>
+
+      <!-- Messages Stream -->
+      <div id="chat-messages" class="chat-messages">
+        <!-- Initial greeting -->
+        <div class="message-wrapper agent-msg">
+          <div class="msg-avatar"><i class="fa-brands fa-amazon"></i></div>
+          <div class="msg-bubble">
+            <p>Hello! Welcome to <strong>Amazon Customer Support</strong>. I am your automated AI assistant powered by historically resolved cases.</p>
+            <p>How can I help you today with your order, return, account, or delivery?</p>
+            <div class="suggested-prompts">
+              <button onclick="quickAsk('Where is my package? The tracking number is 9876543210')">Where is my order?</button>
+              <button onclick="quickAsk('I received a broken item and need a replacement')">Return a damaged item</button>
+              <button onclick="quickAsk('Why was I charged twice for Prime membership?')">Billing inquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="chat-input-area">
+        <form id="chat-form" onsubmit="handleSend(event)">
+          <input type="text" id="chat-input" placeholder="Type your support inquiry..." autocomplete="off">
+          <button type="submit" id="send-btn" class="send-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

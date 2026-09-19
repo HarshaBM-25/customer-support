@@ -1,0 +1,15 @@
+# Data files (large / user-provided)
+dataset/
+data/processed/
+data/results/*.zip
+
+# Environment
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
