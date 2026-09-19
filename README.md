@@ -223,9 +223,6 @@ In-depth error analysis revealed important operational tradeoffs:
 │   ├── retrieval.py            # TF-IDF RAG retrieval engine over 4,787 resolved cases
 │   ├── reply_agent.py          # Complete agent pipeline & multi-tier routing logic
 │   └── evaluate.py             # Automated metrics computation & LLM-as-a-judge scoring
-├── report/
-│   ├── DECISION_LOG.md         # 14 documented engineering decisions & tradeoffs
-│   └── REPORT.md               # In-depth system report, error analysis, and roadmap
 ├── CREDITS.md                  # Attribution for datasets and open-source libraries
 └── README.md                   # Project documentation & execution guide
 ```
